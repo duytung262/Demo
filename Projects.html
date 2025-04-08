@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Work</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <ul class="menu">
+            <li><a href="Home.html">Home</a></li>
+            <li><a href="Dashboards.html">Dashboards</a></li>
+            <li><a href="Teams.html">Teams</a></li>
+            <li><a href="Projects.html">Projects</a></li>
+        </ul>
+        <div class="login">
+            <button id="loginBtn" class="btn-primary">Login</button>
+            <button id="signupBtn" class="btn-secondary">Sign Up</button>
+        </div>
+    </header>
+    <div id="loginModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Login</h2>
+            <form id="loginForm" action="login.php" method="post">
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" required>
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required>
+                <button type="button" id="submitLogin" class="btn-primary">Submit</button>
+            </form>
+            <p class="signup-text">
+                Don't have an account? <a href="#" id="openSignupModal">Sign Up</a>
+            </p>
+        </div>
+    </div>
+
+    <div id="signupModal" class="modal">
+        <div class="modal-content">
+            <span class="close-signup">&times;</span>
+            <h2>Sign Up</h2>
+            <form id="signupForm" action="signup.php" method="post">
+                <label for="signup-username">Username:</label>
+                <input type="text" id="signup-username" name="username" required>
+                <label for="signup-email">Email:</label>
+                <input type="email" id="signup-email" name="email" required>
+                <label for="signup-password">Password:</label>
+                <input type="password" id="signup-password" name="password" required>
+                <label for="signup-confirmPassword">Confirm Password:</label>
+                <input type="password" id="signup-confirmPassword" name="confirmPassword" required>
+                <button type="submit" class="btn-primary">Sign Up</button>
+            </form>
+            <p class="login-text">
+                Already have an account? <a href="#" id="openLoginModal">Login</a>
+            </p>
+        </div>
+    </div>
+    <div class="container">
+        <aside class="sidebar">
+            <ul>
+                <li><a href="#" data-category="all">All</a></li>
+                <li><a href="#" data-category="ongoing">Ongoing</a></li>
+                <li><a href="#" data-category="not-start">Not-start</a></li>
+                <li><a href="#" data-category="done">Done</a></li>
+                <li><a href="#" data-category="stop">Stop</a></li>
+            </ul>
+        </aside>
+        <main class="content">
+            <div id="project-list">
+            </div>
+        </main>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
